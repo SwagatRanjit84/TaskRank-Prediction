@@ -430,7 +430,9 @@ elif ChosenModel == 2 : #Dual task prediction
 		TestTargets.append(Targets)
 
 testing_array = np.array(TestInputs, dtype=float)
-pred = model.predict(testing_array)  
+pred = model.predict(testing_array)
+print(testing_array)
+print(pred)  
 
 if ChosenModel < 2 : #Single task prediction
 	output_singleTask(pred, testing_array, TestTargets)
